@@ -1,0 +1,310 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Using the VSCode extension &quot;Code Spell Checker&quot; | yokuaru Tech notes</title>
+
+  <link href="/scss/tils.css" rel="stylesheet" type="text/css">
+  <link href="/scss/prism.css" rel="stylesheet" type="text/css">
+  <script defer src="/js/tils.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/components/prism-core.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.19.0/plugins/autoloader/prism-autoloader.min.js"
+    data-no-mirror></script>
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <script data-ad-client="ca-pub-2127299793131419" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q63MXL5083"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Q63MXL5083');
+  </script>
+
+  <meta property="og:title" content="Using the VSCode extension &quot;Code Spell Checker&quot;" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yamaccu.github.io/vscode/20230512-vscode-spellcheck" />
+  <meta property="og:site_name" content="yokuaru Tech notes" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <link rel="alternate" hreflang="en" href="https://yamaccu.github.io/enhttps://yamaccu.github.io/vscode/20230512-vscode-spellcheck">
+  <link rel="alternate" hreflang="ja" href="https://yamaccu.github.iohttps://yamaccu.github.io/vscode/20230512-vscode-spellcheck"/>
+  <link rel="alternate" hreflang="x-default" href="https://yamaccu.github.iohttps://yamaccu.github.io/vscode/20230512-vscode-spellcheck"/>
+
+
+</head>
+
+<body>
+  <header
+    style="background-image:url('/img/main2.png'); position:fixed; top:0; left:0; right:0; z-index: 50;">
+    <div class="flex-wrap">
+      <div class="menu" id="humbergericon"></div>
+      <div>
+        <a href="/vscode" class="title" style="font-size:36px;">VSCode Ext</a>
+      </div>
+      <div class="ext-link">
+      <!--
+        <a href="/"><img src="/img/home.png" class="ext-link-icon"
+            alt="home link"></a>&nbsp;&nbsp;-->
+        <a href="https://twitter.com/YY87750722"><img src="/img/twitter.png" class="ext-link-icon"
+            alt="twitter link"></a>&nbsp;&nbsp;
+        <a href="https://github.com/yamaccu"><img src="/img/github.png" class="ext-link-icon"
+            alt="github link"></a>
+      </div>
+    </div>
+    <br>
+  </header>
+  <br>
+  <div class="flex-nowrap, body-font">
+    <div class="side-layout load" id="sidemenu">
+          <div class="side-content">
+            ・
+            <a href="/vscode/20230526-vscode-coderunner">Code Runner</a><br>
+            <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Quick Execution of Programs</span></span>
+          </div>
+          <div class="side-content">
+            ・
+            <a href="/vscode/20230512-vscode-spellcheck">Code Spell Checker</a><br>
+            <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Spell-checking for English words</span></span>
+          </div>
+          <div class="side-content">
+            ・
+            <a href="/vscode/20230609-vscode-liveserver">Live Server</a><br>
+            <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Easy setup of a local server</span></span>
+          </div>
+          <div class="side-content">
+            ・
+            <a href="/tils/20210830-MarkDown-AllInOne">MarkDown All in One</a><br>
+            <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">MarkDown input assistant</span></span>
+          </div>
+          <div class="side-content">
+            ・
+            <a href="/vscode/20230508-vscode-setting">VSCode Recommended settings</a><br>
+            <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">List of useful recommended settings</span></span>
+          </div>
+          <div class="side-content">
+            ・
+            <a href="/vscode/20230515-vscode-input-sequence">vscode-input-sequence</a><br>
+            <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Inserting sequential numbers</span></span>
+          </div>
+      <br>
+      <div style="margin-right:60px;">
+        <script async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2127299793131419"
+          crossorigin="anonymous"></script>
+        <!-- head -->
+        <ins class="adsbygoogle" style="display:block; margin-left:0px;" data-ad-client="ca-pub-2127299793131419"
+          data-ad-slot="2560895837" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+
+    <div class="main-content">
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2127299793131419"
+          crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+          style="display:block;min-width:400px;max-width:970px;width:100%;height:90px"
+          data-ad-client="ca-pub-2127299793131419" 
+          data-ad-slot="2560895837">
+        </ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <br>
+
+      <p>2023/05/12</p>
+<h1 id="using-the-vscode-extension-code-spell-checker">Using the VSCode extension &quot;Code Spell Checker&quot;</h1>
+<hr />
+<p>If you install Code Spell Checker, it will check spelling in real-time and highlight typos with wavy underlines.</p>
+<ul>
+<li>It points out spelling errors with a wavy line and displays possible correct answers.</li>
+<li>Spell check rules can be customized.</li>
+<li>CamelCase (testWord) and SnakeCase (test_word) are supported.</li>
+<li>Hungarian notation (testword) is also supported if configured.</li>
+<li>Extension packs for languages other than English are also available.</li>
+</ul>
+<a href="https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker" style="text-decoration: none;">
+<div class="link-box"><div class="img-box"><div style="background-image: url('https://streetsidesoftware.gallerycdn.vsassets.io/extensions/streetsidesoftware/code-spell-checker/2.20.4/1680519931370/Microsoft.VisualStudio.Services.Icons.Default');"></div></div><div class="text-box"><p class="title">Code Spell Checker - Visual Studio Marketplace</p><p class="description">Extension for Visual Studio Code - Spelling checker for source code</p></div></div>
+</a>
+<h2 id="how-to-use">How to use</h2>
+<p>You just install it, and it will notify you of spelling mistakes with wavy underlines.</p>
+<img src="../img/20230512-vscode-spellcheck-1.png" style="width:100%; max-width:350px; margin-bottom:10px;" alt="display typo">  
+<p>Spelling mistakes are also displayed in the Problems tab.</p>
+<img src="../img/20230512-vscode-spellcheck-3.png" style="width:100%; max-width:400px; margin-bottom:10px;" alt="display typo 2">  
+<p>Moreover, Code Spell Checker provides suggestions for correct alternatives.<br />
+You can place the cursor on the misspelled word, then click on 'Quick Fix' or the lightbulb icon to view the suggested corrections.</p>
+<img src="../img/20230512-vscode-spellcheck-2.png" style="width:100%; max-width:400px;" alt="How to view suggestions for spelling mistakes in Code Spell Checker">
+<h2 id="setting-up-spell-checking-rules">Setting up spell-checking rules</h2>
+<p>Here is how to set up check rules for your own use or share them with your team.</p>
+<h3 id="using-the-settings-file">using the settings file</h3>
+<p>There are 3 configuration files for Code Spell Checker.<br />
+The numbers below indicate the priority order.</p>
+<ol>
+<li>Creating a 'cspell.json' file in the Workspace Folder and configuring it.</li>
+<li>Configuring it through VSCode's Workspace Settings.</li>
+<li>Configuring it through VSCode's User Settings.</li>
+</ol>
+<p>For option 1, you create the file manually.<br />
+For options 2 and 3, you can edit the files directly or use VSCode's settings interface.</p>
+<br>
+<h4 id="creating-cspell.json">Creating cspell.json</h4>
+<p>You can write the following in a JSON file format.<br />
+The following is a list of items that may be used frequently.</p>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>words zzzzz</td>
+<td>Registers 'zzzzz' as a dictionary word and includes it in the suggestions for corrections</td>
+</tr>
+<tr>
+<td>ignoreWords zzzzz</td>
+<td>Excludes 'zzzzz' from spell checking</td>
+</tr>
+<tr>
+<td>flagWords zzzzz</td>
+<td>Forces 'zzzzz' to be considered an error</td>
+</tr>
+<tr>
+<td>allowCompoundWords</td>
+<td>Enables support for Hungarian notation (words written in Hungarian notation like 'spellcheck' would normally be flagged as errors but will not be flagged when this setting is enabled)</td>
+</tr>
+<tr>
+<td>ignorePaths</td>
+<td>Specifies file paths to be excluded from spell checking</td>
+</tr>
+<tr>
+<td>maxNumberOfProblems</td>
+<td>Specifies the maximum number of spelling mistakes to display</td>
+</tr>
+<tr>
+<td>minWordLength</td>
+<td>Specifies the minimum number of alphabets for spell checking English words, The default value is 4</td>
+</tr>
+</tbody>
+</table>
+<p>For example, you can use it as follows:</p>
+<pre><code class="language-json">{
+    &quot;words&quot;: [
+        &quot;aiueo&quot;
+    ],
+    &quot;ignoreWords&quot;: [
+        &quot;testword&quot;
+    ],
+    &quot;flagWords&quot;: [
+        &quot;spellCheck&quot;
+    ],
+    &quot;allowCompoundWords&quot;: true,
+    &quot;ignorePaths&quot;: [
+        &quot;xxxxxx/**&quot;
+    ],
+    &quot;maxNumberOfProblems&quot;: 4,
+    &quot;minWordLength&quot;: 7
+}
+</code></pre>
+<p>For other settings, please refer to the following:</p>
+<a href="https://cspell.org/configuration/" style="text-decoration: none;">
+<div class="link-box"><div class="img-box"><div style="background-image: url('');"></div></div><div class="text-box"><p class="title">CSpell Configuration</p><p class="description">Customizing CSpell - CSpell’s behavior can be controlled through a config file.</p></div></div>
+</a>  
+<h4 id="setting-from-the-settings-page">Setting from the settings page</h4>
+<p>In the extension settings page within VSCode, you can configure settings for both Workspace Settings and User Settings.</p>
+<img src="../img/20230512-vscode-spellcheck-4.png" style="width:100%; max-width:400px;" alt="code spell checker setting">
+<p>You can configure the same settings that can be set in the cspell.json file through the VSCode settings.<br />
+There are a total of 59 items available.</p>
+<h4 id="settings-from-the-right-click-menu">Settings from the right-click menu</h4>
+<p>You can right-click on a flagged word and then choose the option to add the word to the dictionary.</p>
+<img src="../img/20230512-vscode-spellcheck-5.png" style="width:100%; max-width:550px;" alt="code spell checker setting 2">
+<ul>
+<li>Add Words to WorkSpace Settings / User Settings：<br />
+This option allows you to register the selected word in the WorkSpace or User's Settings.json file.</li>
+<li>Add All Spelling Issues to Dictionary：<br />
+This option registers all flagged words as errors in the WorkSpace's Settings.json file.</li>
+<li>Ignore Words：<br />
+This option adds the selected word to the ignore list in the WorkSpace or User's Settings.json file.</li>
+</ul>
+<p>You can also use shortcuts to perform these actions:</p>
+<ul>
+<li>Mac:　⌘+. or Cmd+.</li>
+<li>Windows:　Ctrl+.</li>
+</ul>
+<h3 id="settings-within-your-code">Settings within your code</h3>
+<p>By commenting out the line 'cSpell: xxxxx' within your code, you can configure specific rules.<br />
+Replace 'xxxxx' with the following settings:</p>
+<table>
+<thead>
+<tr>
+<th>setting</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>disable</td>
+<td>Turns off spell checking functionality after this line</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>Turns on spell checking functionality after this line, Used in conjunction with 'disable'</td>
+</tr>
+<tr>
+<td>disable-next-line</td>
+<td>Turns off spell checking functionality for the next line only</td>
+</tr>
+<tr>
+<td>ignore zzzzz</td>
+<td>Excludes 'zzzzz' from spell checking</td>
+</tr>
+<tr>
+<td>flag zzzzz</td>
+<td>Forces 'zzzzz' to be considered an error</td>
+</tr>
+<tr>
+<td>words zzzzz</td>
+<td>Registers 'zzzzz' as a dictionary word and includes it in the suggestions for corrections</td>
+</tr>
+<tr>
+<td>enableCompoundWords</td>
+<td>Enables support for Hungarian notation</td>
+</tr>
+</tbody>
+</table>
+<p>For example, you can use it as follows</p>
+<pre><code class="language-c">/* cSpell:disable */
+spell chek    ←This will not be checked
+/* cSpell:enable */
+</code></pre>
+<br>
+<br>
+<hr />
+
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2127299793131419"
+          crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2127299793131419" data-ad-slot="2560895837"
+          data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <h3>Comment <span class="comment"> (github account is required)</span></h3>
+        <script src="https://utteranc.es/client.js" repo="yamaccu/yamaccu.github.io" issue-term="pathname"
+          theme="github-light" crossorigin="anonymous" async>
+          </script>
+        <br>
+        <br>
+    </div>
+  </div>
+</body>
+
+</html>
