@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Using the VSCode extension &#x27;vscode-input-sequence&#x27; | yokuaru Tech notes</title>
+  <title>Using the VSCode extension &quot;Markdown All in One&quot; | yokuaru Tech notes</title>
 
   <link href="/scss/tils.css" rel="stylesheet" type="text/css">
   <link href="/scss/prism.css" rel="stylesheet" type="text/css">
@@ -27,15 +27,15 @@
     gtag('config', 'G-Q63MXL5083');
   </script>
 
-  <meta property="og:title" content="Using the VSCode extension &#x27;vscode-input-sequence&#x27;" />
+  <meta property="og:title" content="Using the VSCode extension &quot;Markdown All in One&quot;" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yamaccu.github.io/vscode/20230515-vscode-input-sequence" />
+  <meta property="og:url" content="/en/tils/20210830-MarkDown-AllInOne" />
   <meta property="og:site_name" content="yokuaru Tech notes" />
   <meta property="og:locale" content="ja_JP" />
 
-  <link rel="alternate" hreflang="en" href="https://yamaccu.github.io/enhttps://yamaccu.github.io/vscode/20230515-vscode-input-sequence">
-  <link rel="alternate" hreflang="ja" href="https://yamaccu.github.iohttps://yamaccu.github.io/vscode/20230515-vscode-input-sequence"/>
-  <link rel="alternate" hreflang="x-default" href="https://yamaccu.github.iohttps://yamaccu.github.io/vscode/20230515-vscode-input-sequence"/>
+  <link rel="alternate" hreflang="en" href="https://yamaccu.github.io/en/en/tils/20210830-MarkDown-AllInOne">
+  <link rel="alternate" hreflang="ja" href="https://yamaccu.github.io/en/tils/20210830-MarkDown-AllInOne"/>
+  <link rel="alternate" hreflang="x-default" href="https://yamaccu.github.io/en/tils/20210830-MarkDown-AllInOne"/>
 
 
 </head>
@@ -46,7 +46,8 @@
     <div class="flex-wrap">
       <div class="menu" id="humbergericon"></div>
       <div>
-        <a href="/vscode" class="title" style="font-size:36px;">VSCode Ext</a>
+      <!--<a href="/vscode" class="title" style="font-size:36px;">VSCode Ext</a>-->
+      <span class="title" style="font-size:36px;">VSCode Ext</span>
       </div>
       <div class="ext-link">
       <!--
@@ -65,32 +66,32 @@
     <div class="side-layout load" id="sidemenu">
           <div class="side-content">
             ・
-            <a href="/vscode/20230526-vscode-coderunner">Code Runner</a><br>
+            <a href="/en/vscode/20230526-vscode-coderunner">Code Runner</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Quick Execution of Programs</span></span>
           </div>
           <div class="side-content">
             ・
-            <a href="/vscode/20230512-vscode-spellcheck">Code Spell Checker</a><br>
+            <a href="/en/vscode/20230512-vscode-spellcheck">Code Spell Checker</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Spell-checking for English words</span></span>
           </div>
           <div class="side-content">
             ・
-            <a href="/vscode/20230609-vscode-liveserver">Live Server</a><br>
+            <a href="/en/vscode/20230609-vscode-liveserver">Live Server</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Easy setup of a local server</span></span>
           </div>
           <div class="side-content">
             ・
-            <a href="/tils/20210830-MarkDown-AllInOne">MarkDown All in One</a><br>
+            <a href="/en/tils/20210830-MarkDown-AllInOne">MarkDown All in One</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">MarkDown input assistant</span></span>
           </div>
           <div class="side-content">
             ・
-            <a href="/vscode/20230508-vscode-setting">VSCode Recommended settings</a><br>
+            <a href="/en/vscode/20230508-vscode-setting">VSCode Recommended settings</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">List of useful recommended settings</span></span>
           </div>
           <div class="side-content">
             ・
-            <a href="/vscode/20230515-vscode-input-sequence">vscode-input-sequence</a><br>
+            <a href="/en/vscode/20230515-vscode-input-sequence">vscode-input-sequence</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Inserting sequential numbers</span></span>
           </div>
       <br>
@@ -119,73 +120,111 @@
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         <br>
 
-      <p>2023/05/15</p>
-<h1 id="using-the-vscode-extension-vscode-input-sequence">Using the VSCode extension 'vscode-input-sequence'</h1>
+      <p>2021/08/30</p>
+<h1 id="using-the-vscode-extension-markdown-all-in-one">Using the VSCode extension &quot;Markdown All in One.&quot;</h1>
 <hr />
-<p>The 'vscode-input-sequence' is an extension that allows you to add sequential numbers to text or source code.</p>
+<p>Installing the &quot;Markdown All in One&quot; extension in VSCode is convenient for writing Markdown.</p>
 <ul>
-<li>You can specify the start of sequential number input and the numerical value of the step to be increased or decreased.</li>
-<li>You can specify the operation (+ or -) of the sequential number.</li>
-<li>Specify the number of digits.</li>
-<li>Specify the radix (decimal, binary, etc.).</li>
+<li>It has a full range of shortcut functions.</li>
+<li>It recognizes the headings in a page and creates a table of contents.</li>
+<li>When you add a line to a list (bulleted or numbered), it automatically makes the next line a list as well.</li>
+<li>MarkDown files can be converted to HTML.</li>
+<li>Easily create links.</li>
 </ul>
-<a href="https://marketplace.visualstudio.com/items?itemName=tomoki1207.vscode-input-sequence" style="text-decoration: none;">
-<div class="link-box"><div class="img-box"><div style="background-image: url('https://cdn.vsassets.io/v/M220_20230426.6/_content/Header/default_icon_128.png');"></div></div><div class="text-box"><p class="title">vscode-input-sequence - Visual Studio Marketplace</p><p class="description">Extension for Visual Studio Code - sequential-number in vscode</p></div></div>
+<a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one" style="text-decoration: none;">
+<div class="link-box"><div class="img-box"><div style="background-image: url('https://yzhang.gallerycdn.vsassets.io/extensions/yzhang/markdown-all-in-one/3.5.1/1679819344347/Microsoft.VisualStudio.Services.Icons.Default');"></div></div><div class="text-box"><p class="title">Markdown All in One - Visual Studio Marketplace</p><p class="description">Extension for Visual Studio Code - All you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)</p></div></div>
 </a>
-<h2 id="how-to-use">How to use</h2>
-<p>Here are the steps to add sequential numbers:</p>
-<ol>
-<li>Make multiple selections (hold Alt while making selections, or use Shift + Alt for column selection).</li>
-<li>Press Ctrl + Alt + 0.</li>
-<li>Enter the sequential numbering settings.</li>
-</ol>
-<p>The sequential numbering settings is in the following format:</p>
-<p><span style="margin-left:25px; ">&lt;start&gt; &lt;operator&gt; &lt;step&gt; : &lt;digit&gt; : &lt;radix&gt; </span></p>
+<h2 id="shortcut-functions">Shortcut functions</h2>
+<br>
 <table>
 <thead>
 <tr>
-<th>setting</th>
-<th>description</th>
+<th>keyboard operation</th>
+<th>function</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>start</td>
-<td>The starting number.</td>
+<td>Ctr+B</td>
+<td>bold (**)</td>
 </tr>
 <tr>
-<td>operator</td>
-<td>The operator to use. Specify either '+' or '-'.</td>
+<td>Ctr+I</td>
+<td>italic(*)</td>
 </tr>
 <tr>
-<td>step</td>
-<td>The increment or decrement value.</td>
+<td>Ctr+Shift+]</td>
+<td>Heading (#), # increases with each run</td>
 </tr>
 <tr>
-<td>digit</td>
-<td>The number of digits.</td>
+<td>Ctr+Shift+[</td>
+<td>Heading (#), # decreases with each run</td>
 </tr>
 <tr>
-<td>radix</td>
-<td>The radix. If set to 2, the numbers will be displayed in binary.</td>
+<td>Ctr+M</td>
+<td>Inserting Formulas($)</td>
+</tr>
+<tr>
+<td>Alt+C</td>
+<td>Check box ON ([x])、Press again to turn OFF</td>
+</tr>
+<tr>
+<td>Alt+S</td>
+<td>strike-through line(~~)</td>
+</tr>
+<tr>
+<td>Alt+Shift+F</td>
+<td>Table formatting</td>
 </tr>
 </tbody>
 </table>
-<p>Note : All values except for 'start' are optional.&quot;</p>
-<p>example :<br />
-1+1:2 : To count up from 1 with an increment of 1, a 2-digit display</p>
-<img src="../img/20230515-vscode-input-sequence-3.png" style="width:100%; max-width:450px;" alt="code spell checkerの使い方1">
-<p>1+2:4:2 : To count up from 1 with an increment of 2, a 4-digit display, in binary:</p>
-<img src="../img/20230515-vscode-input-sequence-4.png" style="width:100%; max-width:450px;" alt="code spell checkerの使い方2">
-<h2 id="setting">Setting</h2>
-<p>It appears that the extension has not been maintained for a long time and may have some bugs.<br />
-To work around this, the following settings are required</p>
-<p><img src="../img/20230515-vscode-input-sequence-1.png" style="width:100%; max-width:450px;" alt="code spell checker setting"><br><br></p>
-<img src="../img/20230515-vscode-input-sequence-2.png" style="width:100%; max-width:450px;" alt="code spell checker setting2">
-<p>reference</p>
-<a href="https://github.com/tomoki1207/vscode-input-sequence/issues/15" style="text-decoration: none;">
-<div class="link-box"><div class="img-box"><div style="background-image: url('https://opengraph.githubassets.com/95424adb546f8f059432ef2566257c15977e622bd7a6e21d2ae01b5825799bd8/tomoki1207/vscode-input-sequence/issues/15');"></div></div><div class="text-box"><p class="title">recently,it is repeated for each character entered · Issue #15 · tomoki1207/vscode-input-sequence</p><p class="description"></p></div></div>
-</a>
+<br>
+<p>The following are useful shortcuts that are already built into VSCode.</p>
+<table>
+<thead>
+<tr>
+<th>keyboard operation</th>
+<th>function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctr+K → v</td>
+<td>Preview display on the side</td>
+</tr>
+<tr>
+<td>Ctr+shift+v</td>
+<td>Preview display on the tab</td>
+</tr>
+</tbody>
+</table>
+<h2 id="automatic-creation-of-table-of-contents">Automatic creation of table of contents</h2>
+<p>It automatically generates a table of contents using headings (#).</p>
+<ul>
+<li>auto generate：Ctrl + Shift + p → Markdown All in One: Create Table of Contents</li>
+<li>update       ：Ctrl + Shift + p → Markdown All in One: Update Table of Contents</li>
+</ul>
+<p>↓ like this.<br />
+<img src="../img/20210830-MarkDown-AllInOne-2.png" Style="width:100%;max-width:600px;" alt="MarkDownAllInOne Auto creation of table of contents"></p>
+<br>
+<p>Furthermore, it automatically assigns numbers to the headings.</p>
+<ul>
+<li>Number addition：Ctrl + Shift + p → MarkDown All in One: Add/Update section numbers</li>
+<li>Number removal ：Ctrl + Shift + p → MarkDown All in One: Remove section numbers</li>
+</ul>
+<p>↓ like this.<br />
+<img src="../img/20210830-MarkDown-AllInOne-3.png" Style="width:100%;max-width:610px;" alt="MarkDownAllInOne Auto assign numbers to the headings"></p>
+<br>
+<p>If there is a heading that you do not want to include in the table of contents, add &quot;&lt;!-- omit in toc --&gt;&quot; to the line before the heading.</p>
+<h2 id="list-input-assistance">List input assistance</h2>
+<p>When you are creating a list such as &quot;-&quot; or &quot;1.&quot;, the list is automatically added when you add a line.<br />
+Additionally, pressing the tab key indents the list items.</p>
+<h2 id="html-output">HTML output</h2>
+<p>You can convert the currently open Markdown file to HTML.<br />
+Ctr+Shift+p → Markdown All in One: Print current document to HTML</p>
+<h2 id="creating-links">Creating links</h2>
+<p>When you have copied an URL, and select text then press Ctrl+V, it will automatically create a link.</p>
+<img src="../img/20210830-MarkDown-AllInOne-4.png" Style="width:100%;max-width:350px;" alt="MarkDownAllInOne Creating links">  
 <br>
 <br>
 <hr />

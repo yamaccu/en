@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Recommended settings for VSCode | yokuaru Tech notes</title>
+  <title>Using the VSCode extension &#x27;vscode-input-sequence&#x27; | yokuaru Tech notes</title>
 
   <link href="/scss/tils.css" rel="stylesheet" type="text/css">
   <link href="/scss/prism.css" rel="stylesheet" type="text/css">
@@ -27,15 +27,15 @@
     gtag('config', 'G-Q63MXL5083');
   </script>
 
-  <meta property="og:title" content="Recommended settings for VSCode" />
+  <meta property="og:title" content="Using the VSCode extension &#x27;vscode-input-sequence&#x27;" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yamaccu.github.io/vscode/20230508-vscode-setting" />
+  <meta property="og:url" content="/en/vscode/20230515-vscode-input-sequence" />
   <meta property="og:site_name" content="yokuaru Tech notes" />
   <meta property="og:locale" content="ja_JP" />
 
-  <link rel="alternate" hreflang="en" href="https://yamaccu.github.io/enhttps://yamaccu.github.io/vscode/20230508-vscode-setting">
-  <link rel="alternate" hreflang="ja" href="https://yamaccu.github.iohttps://yamaccu.github.io/vscode/20230508-vscode-setting"/>
-  <link rel="alternate" hreflang="x-default" href="https://yamaccu.github.iohttps://yamaccu.github.io/vscode/20230508-vscode-setting"/>
+  <link rel="alternate" hreflang="en" href="https://yamaccu.github.io/en/en/vscode/20230515-vscode-input-sequence">
+  <link rel="alternate" hreflang="ja" href="https://yamaccu.github.io/en/vscode/20230515-vscode-input-sequence"/>
+  <link rel="alternate" hreflang="x-default" href="https://yamaccu.github.io/en/vscode/20230515-vscode-input-sequence"/>
 
 
 </head>
@@ -46,7 +46,8 @@
     <div class="flex-wrap">
       <div class="menu" id="humbergericon"></div>
       <div>
-        <a href="/vscode" class="title" style="font-size:36px;">VSCode Ext</a>
+      <!--<a href="/vscode" class="title" style="font-size:36px;">VSCode Ext</a>-->
+      <span class="title" style="font-size:36px;">VSCode Ext</span>
       </div>
       <div class="ext-link">
       <!--
@@ -65,32 +66,32 @@
     <div class="side-layout load" id="sidemenu">
           <div class="side-content">
             ・
-            <a href="/vscode/20230526-vscode-coderunner">Code Runner</a><br>
+            <a href="/en/vscode/20230526-vscode-coderunner">Code Runner</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Quick Execution of Programs</span></span>
           </div>
           <div class="side-content">
             ・
-            <a href="/vscode/20230512-vscode-spellcheck">Code Spell Checker</a><br>
+            <a href="/en/vscode/20230512-vscode-spellcheck">Code Spell Checker</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Spell-checking for English words</span></span>
           </div>
           <div class="side-content">
             ・
-            <a href="/vscode/20230609-vscode-liveserver">Live Server</a><br>
+            <a href="/en/vscode/20230609-vscode-liveserver">Live Server</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Easy setup of a local server</span></span>
           </div>
           <div class="side-content">
             ・
-            <a href="/tils/20210830-MarkDown-AllInOne">MarkDown All in One</a><br>
+            <a href="/en/tils/20210830-MarkDown-AllInOne">MarkDown All in One</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">MarkDown input assistant</span></span>
           </div>
           <div class="side-content">
             ・
-            <a href="/vscode/20230508-vscode-setting">VSCode Recommended settings</a><br>
+            <a href="/en/vscode/20230508-vscode-setting">VSCode Recommended settings</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">List of useful recommended settings</span></span>
           </div>
           <div class="side-content">
             ・
-            <a href="/vscode/20230515-vscode-input-sequence">vscode-input-sequence</a><br>
+            <a href="/en/vscode/20230515-vscode-input-sequence">vscode-input-sequence</a><br>
             <span style="display:block; margin-left:20px; margin-top:-7px;">- <span style="font-size:13px;">Inserting sequential numbers</span></span>
           </div>
       <br>
@@ -119,19 +120,73 @@
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         <br>
 
-      <p>2023/05/08</p>
-<h1 id="recommended-vscode-settings">Recommended VSCode settings</h1>
+      <p>2023/05/15</p>
+<h1 id="using-the-vscode-extension-vscode-input-sequence">Using the VSCode extension 'vscode-input-sequence'</h1>
 <hr />
-<h2 id="linked-editing">Linked Editing</h2>
-<p>You can link the opening and closing tags of HTML tags.<br />
-When you modify one, the other will automatically be updated as well.</p>
-<img src="../img/20230508-vscode-setting-2.png" style="width:100%; max-width:320px; margin-left:30px; margin-bottom:15px; " alt="Explanation of Linked Editing in VSCode">  
-<p>The method of configuring Linked Editing is to open the settings screen of VSCode and check the box for &quot;Linked Editing&quot;.<br />
-<img src="../img/20230508-vscode-setting-1.png" style="width:100%; max-width:680px; margin-left:30px; margin-top:10px; " alt="Setting of Linked Editing in VSCode"></p>
-<h2 id="format-on-save">format on save</h2>
-<p>Currently in production</p>
-<h2 id="activate-env-in-current-terminal">activate Env In Current Terminal</h2>
-<p>Currently in production</p>
+<p>The 'vscode-input-sequence' is an extension that allows you to add sequential numbers to text or source code.</p>
+<ul>
+<li>You can specify the start of sequential number input and the numerical value of the step to be increased or decreased.</li>
+<li>You can specify the operation (+ or -) of the sequential number.</li>
+<li>Specify the number of digits.</li>
+<li>Specify the radix (decimal, binary, etc.).</li>
+</ul>
+<a href="https://marketplace.visualstudio.com/items?itemName=tomoki1207.vscode-input-sequence" style="text-decoration: none;">
+<div class="link-box"><div class="img-box"><div style="background-image: url('https://cdn.vsassets.io/v/M220_20230426.6/_content/Header/default_icon_128.png');"></div></div><div class="text-box"><p class="title">vscode-input-sequence - Visual Studio Marketplace</p><p class="description">Extension for Visual Studio Code - sequential-number in vscode</p></div></div>
+</a>
+<h2 id="how-to-use">How to use</h2>
+<p>Here are the steps to add sequential numbers:</p>
+<ol>
+<li>Make multiple selections (hold Alt while making selections, or use Shift + Alt for column selection).</li>
+<li>Press Ctrl + Alt + 0.</li>
+<li>Enter the sequential numbering settings.</li>
+</ol>
+<p>The sequential numbering settings is in the following format:</p>
+<p><span style="margin-left:25px; ">&lt;start&gt; &lt;operator&gt; &lt;step&gt; : &lt;digit&gt; : &lt;radix&gt; </span></p>
+<table>
+<thead>
+<tr>
+<th>setting</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>The starting number.</td>
+</tr>
+<tr>
+<td>operator</td>
+<td>The operator to use. Specify either '+' or '-'.</td>
+</tr>
+<tr>
+<td>step</td>
+<td>The increment or decrement value.</td>
+</tr>
+<tr>
+<td>digit</td>
+<td>The number of digits.</td>
+</tr>
+<tr>
+<td>radix</td>
+<td>The radix. If set to 2, the numbers will be displayed in binary.</td>
+</tr>
+</tbody>
+</table>
+<p>Note : All values except for 'start' are optional.&quot;</p>
+<p>example :<br />
+1+1:2 : To count up from 1 with an increment of 1, a 2-digit display</p>
+<img src="../img/20230515-vscode-input-sequence-3.png" style="width:100%; max-width:450px;" alt="code spell checkerの使い方1">
+<p>1+2:4:2 : To count up from 1 with an increment of 2, a 4-digit display, in binary:</p>
+<img src="../img/20230515-vscode-input-sequence-4.png" style="width:100%; max-width:450px;" alt="code spell checkerの使い方2">
+<h2 id="setting">Setting</h2>
+<p>It appears that the extension has not been maintained for a long time and may have some bugs.<br />
+To work around this, the following settings are required</p>
+<p><img src="../img/20230515-vscode-input-sequence-1.png" style="width:100%; max-width:450px;" alt="code spell checker setting"><br><br></p>
+<img src="../img/20230515-vscode-input-sequence-2.png" style="width:100%; max-width:450px;" alt="code spell checker setting2">
+<p>reference</p>
+<a href="https://github.com/tomoki1207/vscode-input-sequence/issues/15" style="text-decoration: none;">
+<div class="link-box"><div class="img-box"><div style="background-image: url('https://opengraph.githubassets.com/95424adb546f8f059432ef2566257c15977e622bd7a6e21d2ae01b5825799bd8/tomoki1207/vscode-input-sequence/issues/15');"></div></div><div class="text-box"><p class="title">recently,it is repeated for each character entered · Issue #15 · tomoki1207/vscode-input-sequence</p><p class="description"></p></div></div>
+</a>
 <br>
 <br>
 <hr />
